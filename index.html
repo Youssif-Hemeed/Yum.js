@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-black">
+    
+    <!-- start main section -->
+    <main  id="main">
+        <div class="container">
+            <div class="row g-4 my-4" id="mainHome"></div>
+        </div>
+    </main>
+    <!-- end main section -->
+    <!-- start sidebar -->
+    <aside class="side-bar ">
+        <div class="nav-slider p-4 d-flex flex-column justify-content-between bg-black">
+            <div class="nav-links overflow-hidden">
+                <ul class="list-unstyled text-white">
+                    <li><a data-value="search" class="py-2">Search</a></li>
+                    <li><a data-value="categories" class="py-2">Categories</a></li>
+                    <li><a data-value="area" class="py-2">Area</a></li>
+                    <li><a data-value="ingredients" class="py-2">Ingredients</a></li>
+                    <li><a data-value="contact" class="py-2">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="nav-footer text-white">
+                <div class="social-media">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <p>Copyright © 2023 All Rights Reserved.</p>
+            </div>
+        </div>
+        <div class="nav-controller px-2 py-4 d-flex flex-column justify-content-between align-items-center bg-white">
+            <img src="images/logo.png" class="logo" alt="">
+            <div class="menu">
+                <i class="fa-solid fa-bars fa-2x" id="open"></i>
+                <i class="fa-solid fa-xmark fa-3x" id="close"></i>
+            </div>
+            <div>
+                <i class="fa-solid fa-globe d-block mb-1"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </aside>
+    <!-- end sidebar -->
+    <!-- start search section -->
+    <section class="search d-none" id="search">
+        <div class="container">
+            <div class="d-flex gap-4 mt-5 flex-wrap flex-md-nowrap justify-content-center">
+                <input type="text" name="name" placeholder="Search By Name"
+                    class="form-control bg-black text-white w-md-50" id="searchByName">
+                <input type="text" name="letter" placeholder="Search By First Letter"
+                    class="form-control bg-black text-white w-md-50" maxlength="1" id="searchByLetter">
+            </div>
+            <div class="row g-3 my-5" id="showSearch"> </div>
+        </div>
+    </section>
+    <!-- end search section -->
+    <!-- start details component -->
+    <div class="details min-vh-100 bg-black position-relative d-none" id="details">
+        <i class="fa-regular fa-rectangle-xmark fa-2x" id="hideDetails"></i>
+        <div class="container"></div>
+    </div>
+    <!-- end details component -->
+    <!-- start categories section -->
+    <section class="categories d-none" id="categories">
+        <div class="container">
+            <div class="row g-3 my-5" id="showCategories"></div>
+        </div>
+    </section>
+    <!-- end categories section -->
+    <!-- start area section -->
+    <section class="area d-none" id="area">
+        <div class="container">
+            <div class="row g-3 my-5" id="showAreas">
+            </div>
+        </div>
+    </section>
+    <!-- end area section -->
+    <!-- start ingredients section -->
+    <section class="ingredients d-none" id="ingredients">
+        <div class="container">
+            <div class="row g-3 my-5" id="showIngredients"></div>
+        </div>
+    </section>
+    <!-- end ingredients section -->
+    <!-- start contact us -->
+    <section class="contact d-none" id="contact">
+        <div class="container py-5 px-md-5 d-flex align-items-center justify-content-center min-vh-100">
+            <div class="row px-md-5 g-4 justify-content-center ">
+                <div class="col-md-6">
+                    <input type="text" id="nameInput" class="form-control" name="name" placeholder="Enter Your Name">
+                    <div id="nameAlert" class="alert alert-danger d-none mt-2">
+                        Special Characters & Numbers Not Allowed
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <input type="email" id="emailInput" class="form-control" name="email"
+                        placeholder="Enter Your Email">
+                    <div id="emailAlert" class="alert alert-danger d-none mt-2">
+                        Email Not Valid *exemple@yyy.zzz
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <input type="tel" id="phoneInput" class="form-control" name="phone" placeholder="Enter Your Phone">
+                    <div id="phoneAlert" class="alert alert-danger d-none mt-2">
+                        Enter Valid Phone Number
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <input type="number" id="ageInput" class="form-control" name="age" placeholder="Enter Your Age">
+                    <div id="ageAlert" class="alert alert-danger d-none mt-2">
+                        Enter Valid Age
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <input type="password" id="passwordInput" class="form-control" name="password"
+                        placeholder="Enter Your Password">
+                    <div id="PasswordAlert" class="alert alert-danger d-none mt-2">
+                        Enter Valid Password *Minimum Eight Characters, At Least One Letter And One Number:*
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <input type="password" id="repasswordInput" class="form-control" name="rePassword"
+                        placeholder="Repassword">
+                    <div id="rePasswordAlert" class="alert alert-danger d-none mt-2">
+                        Enter Valid Repassword
+                    </div>
+
+                </div>
+                <button type="submit" id="btnSubmit" class="btn btn-outline-danger w-auto py-2 px-5"
+                    disabled>Submit</button>
+            </div>
+        </div>
+    </section>
+    <!-- end contact us -->
+    <!-- start screen loading -->
+    <div class="loading">
+        <div class="sk-fading-circle">
+            <div class="sk-circle1 sk-circle"></div>
+            <div class="sk-circle2 sk-circle"></div>
+            <div class="sk-circle3 sk-circle"></div>
+            <div class="sk-circle4 sk-circle"></div>
+            <div class="sk-circle5 sk-circle"></div>
+            <div class="sk-circle6 sk-circle"></div>
+            <div class="sk-circle7 sk-circle"></div>
+            <div class="sk-circle8 sk-circle"></div>
+            <div class="sk-circle9 sk-circle"></div>
+            <div class="sk-circle10 sk-circle"></div>
+            <div class="sk-circle11 sk-circle"></div>
+            <div class="sk-circle12 sk-circle"></div>
+        </div>
+    </div>
+    <!-- end screen loading -->
+    <!-- <div id="offline-message" class="text-light">
+        You are currently offline.
+      </div> -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
